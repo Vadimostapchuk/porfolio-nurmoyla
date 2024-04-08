@@ -1,0 +1,292 @@
+{{define "content"}}
+    <div class="main_head">
+    <div class="bottom_rec"></div>
+    <section class="main">
+        <div class="bottom_content">
+            <a href="https://vk.com/guesthousenurmoyla" target="_blanck"><img src="/static/img/main_vk.svg" class="main_icons" alt=""></a>
+            <a href="https://t.me/+79114102193" target="_blanck"><img src="/static/img/main_tg.svg" class="main_icons" alt=""></a>
+            <div class="d-inline-block">
+                <a href="#contacts"><button>Забронировать <img src="/static/img/strel.svg" alt=""></button></a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 right center_992 right_576 mt-xl-5">
+                    <a href="#cot"><p>Коттеджи</p></a>
+                    <a href="#active"><p>Активный отдых</p></a>
+                    <a href="#rev"><p>Отзывы</p></a>
+                    <a href="#contacts"><p>Контакты</p></a>
+                    <h1>Нурмойла</h1>
+                    <h3>Morbi quis accumsan pulvinar egestas at volutpat. Libero pellentesque odio iaculis lectus luctus.</h3> <br class="d-lg-none d-inline-block">
+                    <div class="d-lg-none d-inline-block">
+                        <a href="https://vk.com/guesthousenurmoyla" target="_blanck"><img src="/static/img/white_vk.svg" class="main_icons" alt=""></a>
+                        <a href="https://t.me/+79114102193" target="_blanck"><img src="/static/img/white_tg.svg" class="main_icons" alt=""></a>
+                    </div><br class="d-lg-none d-inline-block">
+                    <a href="#contacts"><button class="d-lg-none d-inline-block main_mob_btn">Забронировать</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <section class="our_plus mt-sm-5 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="row">
+                        <div class="col-sm-2 right left_576">
+                            <h2 style="color: rgba(190, 162, 114, 1);">01/</h2>
+                        </div>
+                        <div class="col-sm-10"><h2><span>Что отличает</span> НУРМОЙЛУ <span><br>от других гостевых комплексов?</span></h2></div>
+                    </div>
+                    <h3 class="mt-5">Vitae arcu purus sed pellentesque ipsum laoreet pellentesque. Ultrices faucibus nulla eget velit nulla mattis amet felis. Augue amet tortor tincidunt egestas eget habitant senectus ut.</h3>
+                    <div class="row mt-5 margintsm">
+                        <div class="col-sm-6 mt-sm-3">
+                            <div class="one_plus">
+                                <img src="/static/img/sq.svg" alt=""><br>
+                                <div class="plus_line"></div>
+                                <p>Lobortis scelerisque semper vitae eget vestibulum tincidunt in. Ut convallis purus convallis ac senectus a mauris.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-sm-3 mt-5">
+                            <div class="one_plus right_576">
+                                <img src="/static/img/sq.svg" alt=""><br>
+                                <div class="plus_line"></div>
+                                <p>Lobortis scelerisque semper vitae eget vestibulum tincidunt in. Ut convallis purus convallis ac senectus a mauris.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-sm-3 mt-5">
+                            <div class="one_plus">
+                                <img src="/static/img/sq.svg" alt=""><br>
+                                <div class="plus_line"></div>
+                                <p>Lobortis scelerisque semper vitae eget vestibulum tincidunt in. Ut convallis purus convallis ac senectus a mauris.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-sm-3 mt-5">
+                            <div class="one_plus right_576">
+                                <img src="/static/img/sq.svg" alt=""><br>
+                                <div class="plus_line"></div>
+                                <p>Lobortis scelerisque semper vitae eget vestibulum tincidunt in. Ut convallis purus convallis ac senectus a mauris.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 d-xl-block d-none">
+                    <img src="/static/img/photo1.svg" class="our_plus_right_content1" alt="">
+                    <img src="/static/img/photo2.svg" class="our_plus_right_content2" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cottage pt-sm-5" id="cot">
+        <h2><span style="color: rgba(190, 162, 114, 1); font-family: Lighthaus;">02/</span> Наши коттеджи</h2>
+        <div class="slide_backround mt-5">
+            <img src="/static/img/slide_left.svg" class="slide_left" alt="">
+            <img src="/static/img/slide_right.svg" class="slide_right" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb-5 pt-5">
+                        <div id="carouselExample" class="carousel slide">
+                          <div class="carousel-inner">
+                            {{ range $cottage := .cottages }}
+                            <div class="carousel-item">
+                              <div class="row">
+                                <div class="col-lg-6 center_1400">
+                                    <img src="/api/files/rqju4nlj00pkow7/{{ $cottage.id }}/{{ $cottage.main_image }}" alt="" class="img_cot_1400">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>{{ $cottage.title }}</h3>
+                                    <div class="coottage_places">
+                                        {{ $cottage.kol_places }} человек + доп.места
+                                    </div>
+                                    <p>{{ $cottage.description }}</p>
+                                    <a href="/details/{{$cottage.id}}"><button class="details_btn">Подробнее <img src="/static/img/strel1.svg" alt=""></button></a>
+                                    <a href="#contacts"><button class="booking_btn">Забронировать коттедж</button></a>
+                                </div>
+                            </div>
+                            </div>
+                            {{end}}
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="display: none;">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button style="display: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relax pt-5 pb-5" id="active">
+        <div class="container">
+            <div class="row">
+                <h2 class="mb-sm-5"><span style="color: rgba(190, 162, 114, 1); font-family: Lighthaus;">03/</span> Активный отдых и развлечения</h2>
+                {{ range $record := .records }}
+                <div class="col-12 mt-3">
+                    <div class="one_relax">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img src="/api/files/svuex8lc19glel5/{{ $record.id }}/{{ $record.image }}" alt="">
+                            </div>
+                            <div class="col-lg-8">
+                                <h3>{{ $record.title }}</h3>
+                                <div id="{{ $record.id }}"></div>
+                                <script>
+                                    document.getElementById("{{ $record.id }}").innerHTML = "{{ $record.description }}"
+                                </script>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="relax_price">от {{ $record.price }} ₽</div>
+                                    </div>
+                                    <div class="col-5 right d-sm-block d-none">
+                                        <h4>Подробности по телефону:</h4>
+                                        <h5>+7 (911) 410-21-93</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                <div class="col-12 center mt-sm-5">
+                    <button class="btn_bolshe">Показать больше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rev" style="position: relative;" id="rev">
+        <img src="/static/img/owl_left.svg" class="owl_left" alt="">
+        <img src="/static/img/owl_right.svg" class="owl_right" alt="">
+        <div class="rev_rec pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-sm-10 offset-lg-6 offset-md-5 offset-sm-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2><span style="font-family: Lighthaus;">04/</span> Отзывы</h2>
+                            </div>
+                            <div class="col-sm-10 col-9 offset-3 offset-sm-2">
+                                <h2>наших гостей</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <div class="owl-carousel owl-theme" id="slider">
+                        {{ range $review := .reviews }}
+                        <div class="slide1 center">
+                            <div class="one_rev center">
+                                <img src="http://127.0.0.1:8090/api/files/trf85kwj9ekrd1z/{{ $review.id }}/{{ $review.img }}" alt="">
+                                <h3>{{ $review.name }}</h3>
+                                <p>{{ $review.review }}</p>
+                            </div>
+                        </div>
+                        {{ end }}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts pt-5 pb-5 mb-sm-5" id="contacts">
+        <div class="container">
+            <div class="row">
+                <h2><img src="/static/img/con_shish.svg" class="con_shish" alt="">Контакты</h2>
+                <div class="col-12 center">
+                    <img src="/static/img/con_icon.svg" class="icon_mest" alt="">
+                    <h3>{{.contact.adress}}</h3>
+                </div>
+                <div class="col-md-6 mt-sm-4 right left_md">
+                    <a href="tel:+79114102193"><img src="/static/img/con_icon2.svg" class="icon_mest" alt="">
+                    <h3>{{.contact.phone}}</h3></a>
+                </div>
+                <div class="col-md-6 mt-sm-4">
+                    <a href="mailto:nurmoyla.karelia@gmail.com"><img src="/static/img/con_icon3.svg" class="icon_mest" alt="">
+                    <h3>{{.contact.mail}}</h3></a>
+                </div>
+                <div class="col-12 mt-sm-5 mb-sm-5 mt-3 mb-3 center">
+                    <div class="d-inline-block">
+                    <a href="https://vk.com/guesthousenurmoyla" target="_blanck"><button class="soc_con"><img src="/static/img/vk_btn.svg" alt="">Вконтакте</button></a>
+                    <a href="https://wa.me/+79114102193" target="_blanck"><button class="soc_con"><img src="/static/img/wh_icon.svg" alt="">WhatsApp</button></a>
+                    <a href="https://t.me/+79114102193" target="_blanck"><button class="soc_con"><img src="/static/img/tg_icon.svg" alt="">Telegram</button></a>
+                    <a href="#contacts"><button class="booking_contacts">Забронировать коттеджи</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-sm-0 mt-4">
+                    <h4>Оставьте заявку на бронирование, и наш менеджер свяжется с вами в ближйшее время!</h4>
+                    <form action="/order" method="POST" class="mt-sm-5 mt-3 center_576">
+                        <input type="text" placeholder="Имя" class="input_text_con" name="user_name">
+                        <input type="tel" placeholder="Телефон" class="input_text_con" name="user_phone">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата заезда" class="input_text_con" name="user_date">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата выезда" class="input_text_con" name="user_date2">
+                        <input type="text" placeholder="Номер коттеджа" class="input_text_con" name="user_select">
+                        <input type="text" placeholder="Комментарий" class="input_text_con" name="user_messege">
+                        <input type="submit" value="Забронировать" class="send_input">
+                    </form>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6fbfcfe2029429b402d64b624a12ed0c555b39040233d40505a87068b185ba8c&amp;width=100%25&amp;height=661&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Форма успешно отправлена</h5>
+        <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        if (carouselItems.length > 0) {
+            carouselItems[0].classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var slideLeft = document.querySelector('.slide_left');
+            var nextButton = document.querySelector('.carousel-control-prev');
+
+            slideLeft.addEventListener('click', function() {
+                nextButton.click();
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var slideLeft = document.querySelector('.slide_right');
+            var nextButton = document.querySelector('.carousel-control-next');
+
+            slideLeft.addEventListener('click', function() {
+                nextButton.click();
+            });
+        });
+                // Find all elements with class "one_relax"
+        const elementsrel = document.querySelectorAll('.one_relax');
+
+        // Add "display: block" style to the first three elements
+        for (let i = 0; i < 3 && i < elementsrel.length; i++) {
+            elementsrel[i].style.display = 'block';
+        }
+
+        // If there are more than three elements, add "display: block" style to the button with class "btn_bolshe"
+        if (elementsrel.length > 3) {
+            const button = document.querySelector('.btn_bolshe');
+            button.style.display = 'inline-block';
+        }
+        // Add event listener to the button with class "btn_bolshe"
+        const btnBolshe = document.querySelector('.btn_bolshe');
+        btnBolshe.addEventListener('click', function() {
+            // Add "display: block" style to all elements with class "one_relax"
+            elementsrel.forEach(function(element) {
+                element.style.display = 'block';
+            });
+            btnBolshe.style.display = 'none';
+        });
+    </script>
+{{end}}

@@ -1,0 +1,162 @@
+{{define "content"}}
+<div class="second_head center pt-4 pb-4 d-lg-block d-none">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3 center">
+				<a href="/"><h4>Нурмойла</h4></a>
+			</div>
+			<div class="col-1 right">
+				<a href="/#cot"><p>Коттеджи</p></a>
+			</div>
+			<div class="col-2 right">
+				<a href="/#active"><p>Активный отдых</p></a>
+			</div>
+			<div class="col-2">
+				<a href="/#rev"><p>Отзывы</p></a>
+			</div>
+			<div class="col-1">
+				<a href="/#contacts"><p>Контакты</p></a>
+			</div>
+			<div class="col-3">
+				<a href="/#contacts"><button>БРОНИРОВАНИЕ</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main_cot pt-sm-5 pt-3 pb-sm-5 pb-3">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<img class="main_cot_img" src="/api/files/rqju4nlj00pkow7/{{ .cottage.id }}/{{ .cottage.main_image }}" alt="">
+				<a href="/api/files/rqju4nlj00pkow7/{{ .cottage.id }}/{{ .cottage.main_image }}" data-fancybox="images"><div class="row">
+					{{ range $over_img := .cottage.all_images }}
+					<div class="col-2 mt-4">
+						<img class="second_cot_image" src="{{ $over_img }}" alt="">
+					</div>
+					{{ end }}
+				</div></a>
+				<script>
+			    const images = document.querySelectorAll('.second_cot_image');
+			    images.forEach(image => {
+			        const currentSrc = image.getAttribute('src');
+			        const updatedSrc = '/api/files/rqju4nlj00pkow7/{{ .cottage.id }}/' + currentSrc;
+			        image.setAttribute('src', updatedSrc);
+			    });
+			    for (let i = 0; i < images.length; i++) {
+			    if (i < 6) {
+			        images[i].style.display = "block";
+			    }
+			}
+			</script>
+			{{ range $over_img := .cottage.all_images }}
+			<a href="{{ $over_img }}" class="src_new" data-fancybox="images"></a>
+			{{ end }}
+			<script>
+			    const elementsg = document.querySelectorAll('.src_new');
+
+				elementsg.forEach(element => {
+				    const href = element.getAttribute('href');
+				    const newHref = `/api/files/rqju4nlj00pkow7/{{ .cottage.id }}/${href}`;
+				    element.setAttribute('href', newHref);
+				});
+			</script>
+			</div>
+			<div class="col-lg-6 offset-lg-1 mt-lg-0 mt-sm-5 mt-4">
+				<h2>{{.cottage.title}}</h2>
+				<h3><img src="/static/img/kol_person.svg" alt="">{{.cottage.kol_places}} человек + доп.места</h3> 
+				<p>Стоимость</p>
+				<h4>от {{.cottage.cost_cottage}}₽/сутки</h4><br>
+				<p>Доп.место</p>
+				<h4>от {{.cottage.cost_person}}₽/чел</h4><br>
+				<p class="mt-sm-5">Бронирование</p>
+				<div class="row">
+					<div class="col-6 d-sm-block d-none">
+						<a href="/#contacts"><button>Забронировать коттедж</button></a>
+					</div>
+					<div class="col-sm-6 margit_details">
+						<a href="tel:+79114102193"><img src="/static/img/foot_ph.svg" class="main_cot_phone" alt="">
+                    <h5>{{.contact.phone}}</h5></a>
+					</div>
+					<div class="col-12 d-sm-none d-block">
+						<a href="/#contacts"><button>Забронировать коттедж</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7 mt-sm-5 mt-3">
+				<div id="text"></div>
+                <script>
+                    document.getElementById("text").innerHTML = "{{.cottage.big_desc}} "
+                </script>
+			</div>
+			<div class="col-lg-5 mt-sm-5 mt-3">
+				<img style="width: 100%;" src="/api/files/rqju4nlj00pkow7/{{ .cottage.id }}/{{ .cottage.sheme }}" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cot_usl pb-5">
+	<div class="container">
+		<div class="row">
+			<h2>Услуги</h2>
+			<div class="col-lg-6 mt-lg-5">
+				<img src="/static/img/usl1.svg" alt="">
+				<p>количество спальных мест: {{.cottage.kol_bed}}</p><br>
+				<img src="/static/img/usl2.svg" class="two_line_mob" alt="">
+				<p>прикроватные тумбы и шкафы для хранения</p><br>
+				<img src="/static/img/usl3.svg" class="two_line_mob" alt="">
+				<p>кухня объединенная с гостиной</p><br>
+				<img src="/static/img/usl4.svg" alt="">
+				<p>диван в гостиной</p><br>
+				<img src="/static/img/usl5.svg" class="second_string three_line_mob" alt="">
+				<p>посуда (чашки, бокалы, приборы, ножи, тарелки, кастрюли, сковороды и др.)</p><br>
+				<img src="/static/img/usl6.svg" class="two_line_mob" alt="">
+				<p>средство для мытья посуды, кухонное полотенце</p><br>
+				<img src="/static/img/usl7.svg" alt="">
+				<p>большой обеденный стол</p><br>
+				<img src="/static/img/usl8.svg" alt="">
+				<p>телевизор с приставкой</p><br>
+				<img src="/static/img/usl9.svg" alt="">
+				<p>Wi-Fi</p><br>
+			</div>
+			<div class="col-lg-6 mt-lg-5">
+				<img src="/static/img/usl12.svg" alt="">
+				<p>Количество санузлов: {{.cottage.kol_wc}}</p><br>
+				<img src="/static/img/usl13.svg" alt="">
+				<p>средства для ванны</p><br>
+				<img src="/static/img/usl14.svg" class="two_line_mob" alt="">
+				<p>постельные принадлежности, полотенца</p><br>
+				<img src="/static/img/usl15.svg" alt="">
+				<p>камин</p><br>
+				<img src="/static/img/usl11.svg" class="second_string more_line_mob" alt="">
+				<p>бытовая техника (холодильник, стеклокерамическая плита, духовой шкаф, микроволновка, чайник, утюг, кофеварка)</p><br>
+				<img src="/static/img/usl16.svg" alt="">
+				<p>мангал, шампура, решетка</p><br>
+				<img src="/static/img/usl17.svg" alt="">
+				<p>конвекторы</p><br>
+				<img src="/static/img/usl18.svg" alt="">
+				<p>вёсельная лодка (бесплатно)</p><br>
+				<img src="/static/img/usl10.svg" alt="">
+				<p>парковочные места</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="over_cottages pb-5 mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 mt-5">
+				<h3>Также смотрите:</h3>
+			</div>
+			{{ range $over_record := .over_records }}
+			<div class="col-lg-3 col-sm-6 mt-sm-5 mt-3">
+				<a href="/details/{{$over_record.id}}"><div class="one_over_cottages">
+					<img src="/api/files/rqju4nlj00pkow7/{{ $over_record.id }}/{{ $over_record.main_image }}" class="over_img" alt="">
+					<h2>{{$over_record.title}}</h2>
+					<img src="/static/img/over_strel.svg" alt="" class="over_strel_svg">
+				</div></a>
+			</div>
+			{{end}}
+		</div>
+	</div>
+</div>
+{{end}}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet">
+
+    <title>Дистрибьюторская компания Тандем-Урал-Поволжье</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="img/f_sign.svg">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link href="/static/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<header class="">
+    <h2 class="d-lg-none d-block">Нурмойла</h2>
+    <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox"/>
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+
+                    <ul class="menu__box">
+                            <li class="mb-4"><a class="menu_item1_h menu_item1" href="/" style="padding-right: 0px;">Нурмойла</a></li>
+                            <li><a class="menu_item1" href="/#cot" style="padding-right: 0px;">Коттеджи</a></li>
+                            <li class="mt-2"><a class="menu_item1" href="/#active" style="padding-right: 0px;">Активный отдых</a></li>
+                            <li class="mt-2"><a class="menu_item1" href="/#rev" style="padding-right: 0px;">Отзывы</a></li>
+                            <li class="mt-2"><a class="menu_item1" href="/#contacts" style="padding-right: 0px;">Контакты</a></li>
+                    </ul>
+                
+              </div>
+    
+</header>
+<body>
+{{block "content" .}}
+{{end}}
+    <section class="foot pb-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-md-3 col-sm-4 offset-md-0 offset-sm-4 center_576">
+                    <h2>Нурмойла</h2>
+                    <a href="https://vk.com/guesthousenurmoyla" target="_blanck"><img src="/static/img/foot-vk.svg" class="icon_under_logo d-sm-inline-block d-none" alt=""></a>
+                    <a href="https://wa.me/+79114102193" target="_blanck"><img src="/static/img/foot_wh.svg" class="icon_under_logo d-sm-inline-block d-none"  alt=""></a>
+                    <a href="https://t.me/+79114102193" target="_blanck"><img src="/static/img/foot_tg.svg" class="icon_under_logo d-sm-inline-block d-none"  alt="" style="margin-right: 0px;"></a>
+                </div>
+                <div class="col-xl-7 col-md-9 mt-md-0 mt-sm-5">
+                    <div class="row">
+                        <div class="col-sm-3 center">
+                            <a href="/#cot"><h3>Коттеджи</h3></a>
+                        </div>
+                        <div class="col-sm-3 center">
+                            <a href="/#active"><h3>Активный отдых</h3></a>
+                        </div>
+                        <div class="col-sm-3 center">
+                            <a href="/#rev"><h3>Отзывы</h3></a>
+                        </div>
+                        <div class="col-sm-3 center">
+                            <a href="/#contacts"><h3>Контакты</h3></a>
+                        </div>
+                        <div class="col-12 mt-4 center">
+                            <h4>Правила бронирования</h4>
+                            <a href="https://vk.com/guesthousenurmoyla" target="_blanck"><img src="/static/img/foot-vk.svg" class="icon_under_logo d-sm-none d-inline-block" alt=""></a>
+                            <a href="https://wa.me/+79114102193" target="_blanck"><img src="/static/img/foot_wh.svg" class="icon_under_logo d-sm-none d-inline-block"  alt=""></a>
+                            <a href="https://t.me/+79114102193" target="_blanck"><img src="/static/img/foot_tg.svg" class="icon_under_logo d-sm-none d-inline-block"  alt="" style="margin-right: 0px;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-xl-block d-none">
+                    <a href="tel:+79114102193"><img src="/static/img/foot_ph.svg" class="foot_number" alt="">
+                    <h5>{{.contact.phone}}</h5></a><br><br>
+                    <a href="mailto:nurmoyla.karelia@gmail.com"><img src="/static/img/foot_mail.svg" class="foot_number" alt="">
+                    <h5>{{.contact.mail}}</h5></a>
+                </div>
+            </div>
+    </section>
+        </div>
+</body> 
+
+<!-- Вариант 1: пакет jQuery и Bootstrap (включает Popper) -->
+
+<script crossorigin="anonymous"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Подключение jQuery плагина Owl carousel -->
+<!-- Подключение jQuery плагина Masked Input -->
+<script src="/static/js/jquery.maskedinput.min.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.rawgit.com/jackmoore/colorbox/master/jquery.colorbox-min.js"></script>
+<script src="/static/js/jquery.spincrement.min.js"></script>
+<script src="/static/js/maskedinput.min.js"></script>
+<script src="/static/js/miScript.js"></script>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/form-processing.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu_item1');
+    const menuToggle = document.getElementById('menu__toggle');
+
+    menuItems.forEach(function(menuItem) {
+        menuItem.addEventListener('click', function() {
+            menuToggle.checked = !menuToggle.checked;
+        });
+    });
+});
+</script>
+    <script>
+    $(document).ready(function(){
+    const slider = $("#slider").owlCarousel({
+        loop:true,
+        margin:20,
+        nav:true,
+        responsive:{
+            100:{
+                items:1
+            },
+            800:{
+                items:2
+            },
+            1410:{
+                items:3
+            }
+        }
+    });
+    const dots = document.querySelector('.owl-dots');
+    dots.style.display = 'none';
+    var owlLeftButton = document.querySelector('.owl_left');
+    var owlPrevButton = document.querySelector('.owl-prev');
+
+    owlLeftButton.addEventListener('click', function() {
+        owlPrevButton.click();
+    });
+
+    var owlrightButton = document.querySelector('.owl_right');
+    var owlnextButton = document.querySelector('.owl-next');
+
+    owlrightButton.addEventListener('click', function() {
+        owlnextButton.click();
+    });
+    const elements = document.getElementsByClassName("one_rev");
+
+    // Initialize the maximum height variable
+    let maxHeight = 0;
+
+    // Loop through the elements and find the maximum height
+    for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        const height = element.offsetHeight;
+        
+        if (height > maxHeight) {
+            maxHeight = height;
+        }
+    }
+
+    // Set the maximum height to all elements
+    for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        element.style.height = `${maxHeight}px`;
+    }
+});
+</script>
+<script>
+    if (document.location.href.indexOf('showModal') != -1) {
+        $("#exampleModal").modal('show');
+}
+</script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var btnCloseModal = document.querySelector('.btn-close-modal');
+            btnCloseModal.addEventListener('click', function() {
+                window.location.href = '/';
+            });
+        });
+    </script>
+</body>
+</html>
